@@ -30,15 +30,17 @@ def calculate_frequency(text, some_size):
             letters_count += 1
     #display_plot_per_letter(freq)
     print("letters count = ", letters_count)
-    calculate_enthropy(freq)
+    calculate_enthropy(freq, letters_count)
 
 
-def calculate_enthropy(freq):
+def calculate_enthropy(freq, letters_count):
     entropy = 0
+    print("x = {0}", freq)
     for x in freq:
         if x > 0:
-            entropy += x/alphabet_size * math.log2(1./(x/alphabet_size))
-    print(entropy)
+            entropy -= x/letters_count * math.log2(x/letters_count)
+            # print('%.2f'% (-x/letters_count * math.log2(x/letters_count)), end=' ')
+    print("entropy = ",entropy)
 
 if __name__ == '__main__':
     for path in files_paths:
