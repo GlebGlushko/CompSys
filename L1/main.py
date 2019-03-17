@@ -47,9 +47,9 @@ def calculate_entropy(freq, letters_count):
 def compare_file_size(file_size, entropy, letters_count, symbols_count):
     print("entropy = {1},\nletters_count = {2},\ntotal_symbols_count = {3},\nfile size = {0},".
           format(file_size, entropy, letters_count, symbols_count))
-    print("predicted_file_size = {0},".format(entropy * symbols_count/8))
-    print("average_size(2bytes=1ukr_letter&enter,1bytes=other_symbols) = {0},"
-          .format(entropy * (letters_count/4 + (symbols_count-letters_count)/8)))
+    print("predicted_file_size = {0},".format(entropy * letters_count/2))
+    # print("average_size(2bytes=1ukr_letter&enter,1bytes=other_symbols) = {0},"
+    #       .format(entropy * (letters_count/4 + (symbols_count-letters_count)/8)))
 
 
 if __name__ == '__main__':
@@ -59,7 +59,7 @@ if __name__ == '__main__':
         entropy_data = calculate_frequency(file.readlines())
         compare_file_size(os.stat(path).st_size, calculate_entropy(entropy_data[0], entropy_data[1]), entropy_data[1],
                           entropy_data[2])
-        display_plot_per_letter(calculate_entropy(entropy_data[0], entropy_data[1]))
+        # display_plot_per_letter(entropy_data[0])
 
 
 
