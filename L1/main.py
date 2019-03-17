@@ -3,26 +3,26 @@ import numpy as np
 import math
 import os
 
-files_paths = {'vinnyk.txt'}
-alphabet = list('абвгґдеєжзиіїйклмнопрстуфхцчшщьюя')
-alphabet_size = len(alphabet)
+files_paths = {'docker.txt'}
 
 
-def display_plot_per_letter(freq):
+def display_plot_per_letter(freq, alphabet):
     # plot.subplot(212)
+
     plot.figure(figsize=(10, 5))
     plot.bar(x=alphabet, height=freq)
     plot.show()
 
 
-def calculate_frequency(text_in):
+def calculate_frequency(text_in, alphabet):
+
     # print("file_size = ", some_size)
     text = ""
     for x in text_in:
         text += str(x)
     letters_count = 0
     symbols_count = 0
-    freq = np.zeros(alphabet_size, dtype='int')
+    freq = np.zeros(len(alphabet), dtype='int')
     for symb in text:
         pos = -1
         try:
@@ -55,11 +55,13 @@ def compare_file_size(file_size, entropy, letters_count, symbols_count):
 if __name__ == '__main__':
     for path in files_paths:
         print(path)
+        alphabet = list('абвгґдеєжзиіїйклмнопрстуфхцчшщьюя')
+
         file = open(path, "r", encoding='utf-8', errors='ignore')
-        entropy_data = calculate_frequency(file.readlines())
+        entropy_data = calculate_frequency(file.readlines(), alphabet)
         compare_file_size(os.stat(path).st_size, calculate_entropy(entropy_data[0], entropy_data[1]), entropy_data[1],
                           entropy_data[2])
-        # display_plot_per_letter(entropy_data[0])
+        display_plot_per_letter(entropy_data[0], alphabet)
 
 
 
