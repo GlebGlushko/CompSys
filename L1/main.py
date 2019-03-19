@@ -15,13 +15,15 @@ def display_plot_per_letter(freq, alphabet):
 
 
 def calculate_frequency(text_in, alphabet):
-
+    # print(alphabet)
     # print("file_size = ", some_size)
     text = ""
     for x in text_in:
         text += str(x)
     letters_count = 0
     symbols_count = 0
+    text = text.lower()
+    # print(text)
     freq = np.zeros(len(alphabet), dtype='int')
     for symb in text:
         pos = -1
@@ -47,7 +49,7 @@ def calculate_entropy(freq, letters_count):
 def compare_file_size(file_size, entropy, letters_count, symbols_count):
     print("entropy = {1},\nletters_count = {2},\ntotal_symbols_count = {3},\nfile size = {0},".
           format(file_size, entropy, letters_count, symbols_count))
-    print("predicted_file_size = {0},".format(entropy * letters_count/2))
+    print("predicted_file_size = {0},".format(entropy * letters_count/4))
     # print("average_size(2bytes=1ukr_letter&enter,1bytes=other_symbols) = {0},"
     #       .format(entropy * (letters_count/4 + (symbols_count-letters_count)/8)))
 
@@ -97,6 +99,7 @@ def display_plot_per_archive():
     plt.legend()
     plt.show()
 
+
 if __name__ == '__main__':
     for path in files_paths:
         print(path)
@@ -107,6 +110,6 @@ if __name__ == '__main__':
         compare_file_size(os.stat(path).st_size, calculate_entropy(entropy_data[0], entropy_data[1]), entropy_data[1],
                           entropy_data[2])
         # display_plot_per_letter(entropy_data[0], alphabet)
-        display_plot_per_archive()
+        # display_plot_per_archive()
 
 
