@@ -44,7 +44,7 @@ def btob64(s):
 
 
 if __name__ == '__main__':
-    path = "docker.rar"
+    path = "src/docker.rar"
     print(path)
     file = Path(path).read_bytes()
     # print(os.stat(path).st_size)

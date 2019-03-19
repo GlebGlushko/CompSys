@@ -3,7 +3,7 @@ import numpy as np
 import math
 import os
 
-files_paths = {'docker.txt'}
+files_paths = {'src/docker.txt'}
 
 
 def display_plot_per_letter(freq, alphabet):
@@ -49,7 +49,7 @@ def calculate_entropy(freq, letters_count):
 def compare_file_size(file_size, entropy, letters_count, symbols_count):
     print("entropy = {1},\nletters_count = {2},\ntotal_symbols_count = {3},\nfile size = {0},".
           format(file_size, entropy, letters_count, symbols_count))
-    print("predicted_file_size = {0},".format(entropy * letters_count/4))
+    print("predicted_file_size = {0},".format(entropy * letters_count/2))
     # print("average_size(2bytes=1ukr_letter&enter,1bytes=other_symbols) = {0},"
     #       .format(entropy * (letters_count/4 + (symbols_count-letters_count)/8)))
 
@@ -109,7 +109,7 @@ if __name__ == '__main__':
         entropy_data = calculate_frequency(file.readlines(), alphabet)
         compare_file_size(os.stat(path).st_size, calculate_entropy(entropy_data[0], entropy_data[1]), entropy_data[1],
                           entropy_data[2])
-        # display_plot_per_letter(entropy_data[0], alphabet)
-        # display_plot_per_archive()
+        display_plot_per_letter(entropy_data[0], alphabet)
+        display_plot_per_archive()
 
 
