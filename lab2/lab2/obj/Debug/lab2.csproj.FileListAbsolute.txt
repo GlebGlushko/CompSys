@@ -1,0 +1,20 @@
+C:\Users\Hlib\source\repos\lab2\lab2\obj\Debug\lab2.csprojAssemblyReference.cache
+C:\Users\Hlib\source\repos\lab2\lab2\obj\Debug\lab2.csproj.CoreCompileInputs.cache
+C:\Users\Hlib\source\repos\lab2\lab2\bin\Debug\lab2.exe.config
+C:\Users\Hlib\source\repos\lab2\lab2\bin\Debug\lab2.exe
+C:\Users\Hlib\source\repos\lab2\lab2\bin\Debug\lab2.pdb
+C:\Users\Hlib\source\repos\lab2\lab2\bin\Debug\System.ValueTuple.dll
+C:\Users\Hlib\source\repos\lab2\lab2\bin\Debug\System.ValueTuple.xml
+C:\Users\Hlib\source\repos\lab2\lab2\obj\Debug\lab2.csproj.CopyComplete
+C:\Users\Hlib\source\repos\lab2\lab2\obj\Debug\lab2.exe
+C:\Users\Hlib\source\repos\lab2\lab2\obj\Debug\lab2.pdb
+D:\Studying\comp sys\lab2\lab2\bin\Debug\lab2.exe.config
+D:\Studying\comp sys\lab2\lab2\bin\Debug\lab2.exe
+D:\Studying\comp sys\lab2\lab2\bin\Debug\lab2.pdb
+D:\Studying\comp sys\lab2\lab2\bin\Debug\System.ValueTuple.dll
+D:\Studying\comp sys\lab2\lab2\bin\Debug\System.ValueTuple.xml
+D:\Studying\comp sys\lab2\lab2\obj\Debug\lab2.csprojAssemblyReference.cache
+D:\Studying\comp sys\lab2\lab2\obj\Debug\lab2.csproj.CoreCompileInputs.cache
+D:\Studying\comp sys\lab2\lab2\obj\Debug\lab2.csproj.CopyComplete
+D:\Studying\comp sys\lab2\lab2\obj\Debug\lab2.exe
+D:\Studying\comp sys\lab2\lab2\obj\Debug\lab2.pdb
