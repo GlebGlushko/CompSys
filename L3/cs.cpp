@@ -2,16 +2,20 @@
 using namespace std;
 int main(){
 
-    int N = 5e3;
+    clock_t Start = clock();
+    int N = 5e5;
     int nums[N];
     for (int i=0;i<N;++i)
         {
             nums[i] = rand();
             //cout<<nums[i]<<endl;
         }
+    for (int e =0; e<100;++e)
     for (int i=0;i<N;++i)
     {
-        cout<<nums[rand()%N]<<endl;
+        int x = nums[rand()%N];
     }
-    cout<<N;
+
+    printf("Time taken: %.2fs\n", (double)(clock() - Start)/CLOCKS_PER_SEC);
+
 }
