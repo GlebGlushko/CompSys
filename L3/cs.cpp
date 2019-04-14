@@ -10,7 +10,7 @@ int main(){
             nums[i] = rand();
             //cout<<nums[i]<<endl;
         }
-    for (int e =0; e<100;++e)
+    for (int e =0; e<1000;++e)
     for (int i=0;i<N;++i)
     {
         int x = nums[rand()%N];
